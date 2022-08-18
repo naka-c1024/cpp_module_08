@@ -1,15 +1,12 @@
 #ifndef EASYFIND_HPP
 #define EASYFIND_HPP
 
-class easyfind
-{
-public:
-	easyfind();
-	~easyfind();
-	easyfind(easyfind const &other);
-	easyfind &operator=(easyfind const &other);
-private:
+#include <algorithm>
 
-};
+template <typename T>
+typename T::iterator	easyfind(T &container, const int num)
+{
+	return std::find(container.begin(), container.end(), num);
+}
 
 #endif /* EASYFIND_HPP */
